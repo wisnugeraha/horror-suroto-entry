@@ -10,8 +10,8 @@ import sys
 
 STORY = (
     "The hospital called this morning to say the bed had been emptied out overnight, "
-    "which is strange, because I was the only one in it — my sister checked on me at four, "
-    "and she has been dead for six years."
+    "which is strange, because I was the only one in it — my sister checked on me "
+    "at four, and she has been dead for six years."
 )
 MAX = 400
 OUT = "/output/entry.txt"
