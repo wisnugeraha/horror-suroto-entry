@@ -25,8 +25,17 @@ def emit(story: str, out: str = OUT) -> None:
         f.write(story + "\n")
 
 
+def confirm(out: str = OUT) -> None:
+    with open(out, "rb") as f:
+        data = f.read()
+    text = data.decode("utf-8").rstrip("\n")
+    if text != STORY:
+        sys.exit(f"confirm failed: disk has {text[:40]!r}, expected {STORY[:40]!r}")
+
+
 def main() -> None:
     emit(STORY)
+    confirm(OUT)
 
 
 if __name__ == "__main__":
